@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <!-- site metas -->
+      <title>Plant</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+      <style>
+         .my_image {
+         border-radius: 75%;
+         border:5px solid black;
+         color:black;
+         }
+         a {
+            font-size: 17px;
+            background-color: #2d2c2c;
+            color: #fff;
+            padding: 13px 0px;
+            width: 100%;
+            max-width: 190px;
+            text-align: center;
+            display: inline-block;
+            transition: ease-in all 0.5s;
+            border-radius: 15px;
+            margin-left: 45%;
+         }
+      </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      
+
+      
+
+      <div  class="two_box">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="two_box_img">
+                     <figure><img src="data:image/png;base64, {{ data }}" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="two_box_img">
+                     <h2>Plant  Condition : -</h2>
+                     <h2 style="margin-left: 20%;" >{{ class_data }}</h2>
+                     <a href="{{ url_for('index')}}">Index</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+
